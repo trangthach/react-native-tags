@@ -49,8 +49,7 @@ class Tags extends React.Component {
       );
     } else if (
       text.length > 1 &&
-      this.props.createTagOnString.includes(text.slice(-1)) &&
-      !(this.state.tags.indexOf(text.slice(0, -1).trim()) > -1)
+      this.props.createTagOnString.includes(text.slice(-1))
     ) {
       this.addTag(text.slice(0, -1));
     } else {
